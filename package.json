@@ -1,5 +1,5 @@
 {
-  "name": "personal-website",
+  "name": "alejandrobarrientos",
   "version": "1.0.0",
   "description": "Personal website.",
   "main": "index.js",
@@ -23,5 +23,6 @@
   "devDependencies": {
     "webpack": "^5.41.1",
     "webpack-cli": "^4.7.2"
-  }
+  },
+  "dependencies": {}
 }
