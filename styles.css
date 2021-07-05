@@ -2,11 +2,9 @@
   background-color: black;
   padding-top: 2em;
 }
-.p-7 {
-  padding: 2rem;
-}
 #profilePicture {
   max-width: 75%;
   max-height: 75%;
   align-self: auto;
+  padding-top: 1.5rem;
 }
