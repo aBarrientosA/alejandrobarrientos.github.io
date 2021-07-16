@@ -17,26 +17,24 @@
 </head>
 
 <body>
-  <!-- Menu Bar -->
-  <nav class="navbar navbar-expand-md navbar-dark mb-3 navbar-fixed-top py-5">
-    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand mr-3">Alejandro Barrientos</a>
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-          <a href="index.html" class="nav-item nav-link">Home</a>
-          <a href="projects.html" class="nav-item nav-link active">Projects</a>
-        </div>
-      </div>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+      <script>
+        $("#nav-placeholder").load("navigation.html");
+      </script>
     </div>
-  </nav>
-  <!------ End of menu bar----->
+
+    <script>
+    $(function(){
+      $("#Projects").addClass("active")
+      $("#Home").removeClass("active")
+    });
+    </script>
+    <!--end of Navigation bar-->
   <div class="container-fluid">
     <div class="row row-eq-height" style="width: 100%">
       <div class="col p-4">
-        <h1>Lorem, ipsum dolor.</h1>
+        <h1>Projects Coming Soon :P</h1>
         <h4><i>Current project.</i></h4>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, consequatur dicta fugit illo sed voluptatem
         provident rerum minus, incidunt praesentium, est quae quia cum voluptates eos quo perferendis non iusto placeat

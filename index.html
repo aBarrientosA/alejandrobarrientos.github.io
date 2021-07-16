@@ -19,25 +19,50 @@
 </head>
 
 <body>
-  <!-- Menu Bar -->
-  <nav class="navbar navbar-expand-md navbar-dark mb-3 navbar-fixed-top py-5">
-    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand mr-3" style="font-family: Monaco">Alejandro Barrientos</a>
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-          <a href="#youreHereSilly" class="nav-item nav-link active" style="font-family: Monaco">Home</a>
-          <a href="projects.html" class="nav-item nav-link" style="font-family: Monaco">Projects</a>
-        </div>
-      </div>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+      <script>
+        $("#nav-placeholder").load("navigation.html");
+      </script>
     </div>
-  </nav>
-  <!------------------>
+
+    <script>
+    $(function(){
+      $("#Home").addClass("active");
+      $("#Projects").removeClass("active");
+    });
+    </script>
+    <!--end of Navigation bar-->
   <div class="row" style="width: 100%">
     <div class="col-md-4 p-5">
-      <img id="profilePicture" class="rounded mx-auto d-block" src="Images/IMG_0063.jpeg" alt="profile picture of me" />
+      <div id="carouselExampleControls" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img id="profilePicture" class="rounded mx-auto d-block" src="Images/IMG_0063.jpeg" alt="profile picture of me" />
+          </div>
+          <div class="carousel-item">
+            <img id ="profilePicture" src="placeholder.png" class="rounded mx-auto d-block" alt="placeholder image">
+          </div>
+          <div class="carousel-item">
+            <img id = "profilePicture" src="placeholder.png" class="rounded mx-auto d-block" alt="placeholder image">
+          </div>
+        </div>
+        <!-- Button area -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!-- End of buttons-->
+      </div>
+              <!-- <img id="profilePicture" class="rounded mx-auto d-block" src="Images/IMG_0063.jpeg" alt="profile picture of me" /> -->
+
+      
+
+
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-2">
@@ -146,7 +171,7 @@
         <div class="row mt-3">
           <div class="col-4">
             <!-- col 2-->
-            <h3 style="font-family: Monaco">Books I am currently reading.</h3>
+            <h3 style = "font-family: Monaco;">Books I am currently reading.</h3>
             <p class="date"><i>July 8, 2021</i></p>
           </div>
           <!-- col 2-->
@@ -165,6 +190,40 @@
             </ul>
           </div>
           <!-- col 10-->
+        </div>
+      </div>
+      <div class="container-sm p-4">
+        <!-- row-->
+        <div class="row mt-3 mb-4">
+          <div class="col-4">
+            <h3>Favorite Articles and Journals</h3>
+            <p class="date"><i>Updated July 16, 2021</i></p>
+          </div>
+          <!-- col 2-->
+          <div class="col-10">
+            <ul  class="list-group">
+              <li class="list-group-item">
+                <a href="https://medium.com/s/world-wide-wtf/the-attention-economy-is-eating-our-brains-what-if-we-taxed-it-ccd8418c7fc0" style ="text-decoration: none;">
+                <strong>The Attention Economy Is Eating Our Brains</strong></a> by Dorian Peters
+              </li>
+              <li class="list-group-item">
+                <a href="https://elemental.medium.com/why-your-brain-needs-idle-time-e5d90b0ef1df" style ="text-decoration: none;">
+                <strong>Why Your Brain Needs Idle Time</strong></a> by Markham Heid
+              </li>
+              <li class="list-group-item">
+                <a href="https://medium.com/the-almanac/what-is-human-centered-design-2a806e624831" style ="text-decoration: none;">
+              <strong>What is human-centered design?</strong></a> by TWG
+              </li>
+              <li class="list-group-item">
+                <a href="https://medium.com/iipp-blog/how-can-governments-tame-the-power-of-big-tech-901a0a3ab45f" style ="text-decoration: none;">
+              <strong>How can government tame the power of Big Tech?</strong></a> by the UCL Institute for Innovation and Public Purpose
+              </li>
+              <li class = "list-group-item">
+                <a href="https://arxiv.org/pdf/2105.12613.pdf" style ="text-decoration: none;">
+                <strong>Data Security on Mobile Devices: Current State of the Art, Open Problems, and Proposed Solutions</strong></a> by Maximilian Zinkus, Tushar M. Jois, and Matthew Green
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="container-sm p-4">
