@@ -1,0 +1,213 @@
+<h1 class="display-2 pb-3" style="font-family: Monaco"><span class ="distort">Hi I'm Alex!</span>
+</h1>
+<script>
+    //ONLOAD
+    $(function(){
+    //DECLARE GLOBAL VARIABLE FOR USE IN HANDLERS
+    var orig, sib;
+    var runs = 0;
+    var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890+>?-$#@%&*';
+    
+    //RUN JS WHEN 'DISTORT' IS HOVERED
+    $('.distort').hover(function(){
+        var curr = $(this);
+        orig = $(this).text();
+        sib = setInterval(function(){
+            distortText(curr);
+        }, 100);
+    }, function(){
+        //RESET THE ORIGINAL TEXT
+        clearInterval(sib);
+        $(this).text(orig);
+    });
+    
+    function distortText(i){
+        //MAINTAINS SOME READABILITY IN THE TEXT BY ONLY ALLOWING 3 CHARACTERS TO BE DISTORTED
+        if (runs >= 2){
+        runs = 0;
+        i.text(orig);
+        return;
+        }
+        //GET EACH INDIVIDUAL CHARACTER
+        var chars = i.text().split('');
+        //GET A RANDOM CHARACTER FROM THE TEXT
+        var rand = Math.floor(Math.random() * (chars.length));
+        //GET A RANDOM REPLACEMENT CHARACTER
+        var randRep = Math.floor(Math.random() * (charSet.length));
+        //CHECK TO MAKE SURE THAT THE NEW CHARACTER IS DIFFERENT FROM THE OLD
+        if(chars[rand] != charSet[randRep] && chars[rand] != ' '){
+        chars[rand] = charSet[randRep];
+        } else {
+        distortText(i);
+        }
+        //UPDATE TEXT
+        i.text(chars.join(''));
+        runs += 1;
+    }
+    });
+</script>
+<template>
+  <div class="container-sm p-4">
+    <!-- row-->
+    <div class="row mt-3 mb-4">
+      <div class="col-4">
+        <h3></h3>
+        <p class="date"><i></i></p>
+      </div>
+      <!-- col 2-->
+      <div class="col-10">
+        <!-- content -->
+      </div>
+    </div>
+  </div>
+</template>
+<div class="container-sm p-4">
+  <!-- row-->
+  <div class="row mt-3">
+    <div class="col-4">
+      <h3 style="font-family: Monaco">About Me.</h3>
+    </div>
+    <!-- col 2-->
+    <div class="col-10">
+      <!-- content -->
+      <p alt="about me">My name is Alex and I'm 22 years young. Some of the things I enjoy doing for fun is
+        reading ACM
+        Magazine/Journals, dystopian novels, watching Twitch, and also learning about InfoSec. If you have any
+        type of feedback or questions
+        feel free to email me! </p>
+      <p alt="education">I graduted from Heidelberg University in Tiffin, Ohio with a Bachelors in Computer
+        Science and Minored in
+        Integrated Media.</p>
+      <p alt="skills"></p>
+      <p>This summer there are a few tools and programs I have been using and beginning to feel comfortable with.
+      <ul>
+        <li>Cypress</li>
+        <li>Docker</li>
+        <li>Lighthouse CI</li>
+        <li>Percy</li>
+        <li>K6</li>
+        <li>PHP</li>
+      </ul>
+      Including this website! This website will be a project that will continously be updated with more
+      information and features as I continue learning
+      web design.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-sm p-4">
+  <!-- row-->
+  <div class="row mt-3">
+    <div class="col-4">
+      <!-- col 2-->
+      <h3 style="font-family: Monaco;">Books I am currently reading.</h3>
+      <p class="date"><i>July 8, 2021</i></p>
+    </div>
+    <!-- col 2-->
+    <div class="col-10">
+      <!-- col 10 -->
+      <ul class="list-group">
+        <li class="list-group-item">
+          Cuckoo's Egg by <i>Clifford Stoll</i>
+        </li>
+        <li class="list-group-item">
+          Tribe of Hacker's by <i>Jennifer Jin & Marcus J. Carey</i>
+        </li>
+        <li class="list-group-item">
+          Weapons of Math Destruction by <i>Cathy O'Neil</i>
+        </li>
+      </ul>
+    </div>
+    <!-- col 10-->
+  </div>
+</div>
+<div class="container-sm p-4">
+  <!-- row-->
+  <div class="row mt-3 mb-4">
+    <div class="col-4">
+      <h3>Favorite Articles and Journals</h3>
+      <p class="date"><i>Updated July 16, 2021</i></p>
+    </div>
+    <!-- col 2-->
+    <div class="col-10">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a href="https://medium.com/s/world-wide-wtf/the-attention-economy-is-eating-our-brains-what-if-we-taxed-it-ccd8418c7fc0"
+            style="text-decoration: none;">
+            <strong>The Attention Economy Is Eating Our Brains</strong></a> by Dorian Peters
+        </li>
+        <li class="list-group-item">
+          <a href="https://elemental.medium.com/why-your-brain-needs-idle-time-e5d90b0ef1df"
+            style="text-decoration: none;">
+            <strong>Why Your Brain Needs Idle Time</strong></a> by Markham Heid
+        </li>
+        <li class="list-group-item">
+          <a href="https://medium.com/the-almanac/what-is-human-centered-design-2a806e624831"
+            style="text-decoration: none;">
+            <strong>What is human-centered design?</strong></a> by TWG
+        </li>
+        <li class="list-group-item">
+          <a href="https://medium.com/iipp-blog/how-can-governments-tame-the-power-of-big-tech-901a0a3ab45f"
+            style="text-decoration: none;">
+            <strong>How can government tame the power of Big Tech?</strong></a> by the UCL Institute for
+          Innovation and Public Purpose
+        </li>
+        <li class="list-group-item">
+          <a href="https://arxiv.org/pdf/2105.12613.pdf" style="text-decoration: none;">
+            <strong>Data Security on Mobile Devices: Current State of the Art, Open Problems, and Proposed
+              Solutions</strong></a> by Maximilian Zinkus, Tushar M. Jois, and Matthew Green
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container-sm p-4">
+  <!-- row-->
+  <div class="row mt-3 mb-4">
+    <div class="col-4">
+      <h3>Podcasts I'm Listening To</h3>
+      <p class="date"><i>July 13, 2021</i></p>
+    </div>
+    <!-- col 2-->
+    <div class="col-10">
+      <!-- content -->
+      <ul class="list-group">
+        <li class="list-group-item">
+          Ear Hustle
+        </li>
+        <li class="list-group-item">
+          Cyberwire Daily
+        </li>
+        <li class="list-group-item">
+          CATO Daily Podcast
+        </li>
+        <li class="list-group-item">
+          The ReadME Podcast
+        </li>
+        <li class="list-group-item">
+          Hacking Humans
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container-sm p-4">
+  <div class="row mt-3">
+    <div class="col-4">
+      <!-- col 2-->
+      <h3 style="font-family: Monaco">Projects I am currently working on.</h3>
+    </div>
+    <!-- col 2-->
+    <div class="col-10">
+      <!-- col 10 -->
+      <p>
+        Currently only working on creating and updating this website.
+        I'm also trying to gather all of my projects I worked on during
+        my years in college. It should be fun to view and publish those.
+      </p>
+    </div>
+    <!-- col 10-->
+  </div>
+  <!-- row-->
+</div>
+</div>
