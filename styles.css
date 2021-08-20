@@ -98,6 +98,36 @@ canvas {
 .distort {
   color: #222;
 }
-span {
-  
+.fade-in {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@include media-breakpoint-up(sm) {
+  .display-2 {
+    font-size: 2.5rem;
+  }
+  .display-4 {
+    font-size: 1.8rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .display-2 {
+    font-size: 1.5rem;
+  }
+  .display-4 {
+    font-size: 1.2rem;
+  }
+}
+
