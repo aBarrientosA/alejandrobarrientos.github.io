@@ -1,0 +1,148 @@
+@import "keyframes";
+$coolGrey : rgb(134, 147, 171);
+$beauBlue: rgb(189, 212, 231);
+$raisinBlack: rgb(33, 34, 39);
+$cadet: rgb(99, 112, 116);
+$steelBlue: rgb(170, 185, 207);
+.list-group-item {
+    opacity: 45%;
+}
+.navbar {
+    float: right;
+    color: black;
+}
+#profilePicture {
+	max-width: 75%;
+	max-height: 75%;
+	align-self: auto;
+	padding-bottom: 1.5rem;
+}
+h3 {
+	font-family: "Monaco";
+}
+.background {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+#tsparticles {
+	position: absolute;
+	width: 100%;
+	height: inherit;
+	background-color: #ffffff;
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+canvas {
+	display: block;
+	position: fixed;
+	z-index: -1;
+}
+.row {
+	--bs-gutter-x: 0 !important;
+}
+.distort {
+	color: #222;
+}
+	// #nextArrow {
+	// 	margin-right: auto;
+	// 	margin-left: 47%;
+	// 	height: 5%;
+	// 	width: auto;
+	// 	position: fixed;
+	// 	top: 90%;
+	// }
+// }
+#codeIcon {
+	margin-right: auto;
+	margin-left: 75%;
+	height: 35vw;
+	width: auto;
+	position: absolute;
+	margin-top: 17vw;
+	z-index: -1;
+}
+html {
+	max-width: 100%;
+    max-height: 100%;
+	overflow-x: hidden;
+}
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+    max-height: 100%;
+    background-color: $coolGrey !important;
+}
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    //Put your CSS here for 200px to 767px width devices (cover all width between 200px to 767px //
+        #test {
+            font-size: 2rem;
+            margin-bottom: calc(100% - 75%);
+            padding-top: 10px;
+
+        }
+        #intro {
+            margin-top: 100%;
+            min-height: 384px; 
+            max-width: 100%;
+        }
+        .container{
+            color: white;
+        }
+        #mainName {
+            font-size: 3.6rem;
+        }
+        #aboutMe{
+            font-size: 3.4rem;
+        }
+        #books, #articles{
+            font-size: 3.4rem;
+            margin-top: 25%;
+        }
+        p{
+            font-size: 1rem;
+        }
+        .list-group li {
+            font-size: .75rem;
+            padding: .75rem 1.25rem;
+        }
+        #nextArrow {
+            margin-right: auto;
+            margin-left: 41%;
+            height: 5%;
+            width: auto;
+            position: fixed;
+            top: 75%;
+        }
+        #information {
+            margin-top: calc(100% - 75%);
+        }
+        html {
+            max-width: 100%;
+            max-height: 100%;
+            overflow-x: hidden;
+        }
+    }
+@media only screen and (min-width: 768px) and (max-width: 2000px)  {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+        color: white;
+        margin-bottom: 10%;
+    }
+    #intro {
+        margin-top: 40%;
+        margin-bottom: 10%;
+    }
+    .row {
+        margin-top: 35%;
+        margin-bottom: 10%;
+        color: $raisinBlack !important;
+    }
+    }
+
+
+

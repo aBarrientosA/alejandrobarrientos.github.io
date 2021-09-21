@@ -1,28 +1,5 @@
-.navbar {
-  background-color: black;
-  background-image: radial-gradient(rgb(41, 40, 40) 50%, transparent 50%);
-  background-size: 4px 4px;
-  padding-top: 2em;
-}
-#profilePicture {
-  max-width: 75%;
-  max-height: 75%;
-  align-self: auto;
-  padding-bottom: 1.5rem;
-}
-/* .blinking-cursor {
-  font-weight: 100;
-  font-size: inherit;
-  color: #2e3d48;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-} */
 @keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -30,47 +7,73 @@
   }
 }
 @-moz-keyframes blink {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
     color: black;
   }
 }
-
 @-webkit-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
     color: black;
   }
 }
-
 @-ms-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
     color: black;
   }
+}
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+.fade-in {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 
-@-o-keyframes "blink" {
-  from,
-  to {
-    color: transparent;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  50% {
-    color: black;
+  100% {
+    opacity: 1;
   }
 }
+.list-group-item {
+  opacity: 45%;
+}
+
+.navbar {
+  float: right;
+  color: black;
+}
+
+#profilePicture {
+  max-width: 75%;
+  max-height: 75%;
+  align-self: auto;
+  padding-bottom: 1.5rem;
+}
+
 h3 {
-  font-family: "Monaco"
+  font-family: "Monaco";
 }
+
 .background {
   position: absolute;
   display: block;
@@ -78,6 +81,7 @@ h3 {
   left: 0;
   z-index: 0;
 }
+
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -87,47 +91,120 @@ h3 {
   background-size: cover;
   background-position: 50% 50%;
 }
+
 canvas {
-  display:block;
+  display: block;
   position: fixed;
   z-index: -1;
 }
+
 .row {
   --bs-gutter-x: 0 !important;
 }
+
 .distort {
   color: #222;
 }
-.fade-in {
-  animation: fadeIn ease 2s;
-  -webkit-animation: fadeIn ease 2s;
-  -moz-animation: fadeIn ease 2s;
-  -o-animation: fadeIn ease 2s;
-  -ms-animation: fadeIn ease 2s;
+
+#codeIcon {
+  margin-right: auto;
+  margin-left: 75%;
+  height: 35vw;
+  width: auto;
+  position: absolute;
+  margin-top: 17vw;
+  z-index: -1;
 }
-@keyframes fadeIn {
-  0% {
-    opacity:0;
+
+html {
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 100%;
+  background-color: #8693ab !important;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  #test {
+    font-size: 2rem;
+    margin-bottom: calc(100% - 75%);
+    padding-top: 10px;
   }
-  100% {
-    opacity:1;
+
+  #intro {
+    margin-top: 100%;
+    min-height: 384px;
+    max-width: 100%;
+  }
+
+  .container {
+    color: white;
+  }
+
+  #mainName {
+    font-size: 3.6rem;
+  }
+
+  #aboutMe {
+    font-size: 3.4rem;
+  }
+
+  #books, #articles {
+    font-size: 3.4rem;
+    margin-top: 25%;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .list-group li {
+    font-size: 0.75rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  #nextArrow {
+    margin-right: auto;
+    margin-left: 41%;
+    height: 5%;
+    width: auto;
+    position: fixed;
+    top: 75%;
+  }
+
+  #information {
+    margin-top: calc(100% - 75%);
+  }
+
+  html {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
   }
 }
-@include media-breakpoint-up(sm) {
-  .display-2 {
-    font-size: 2.5rem;
+@media only screen and (min-width: 768px) and (max-width: 2000px) {
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    margin-bottom: 10%;
   }
-  .display-4 {
-    font-size: 1.8rem;
+
+  #intro {
+    margin-top: 40%;
+    margin-bottom: 10%;
+  }
+
+  .row {
+    margin-top: 35%;
+    margin-bottom: 10%;
+    color: #212227 !important;
   }
 }
 
-@include media-breakpoint-up(md) {
-  .display-2 {
-    font-size: 1.5rem;
-  }
-  .display-4 {
-    font-size: 1.2rem;
-  }
-}
-
+/*# sourceMappingURL=styles.css.map */
