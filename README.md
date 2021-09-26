@@ -10,4 +10,4 @@ I've tried creating this exact project multiple times, but it's never really pan
 
 The website will includes details about me and how to contact me on various platforms.
 
-Check it out here -> https://abarrientosa.github.io/alejandrobarrientos.github.io/
+Check it out here -> https://alexbarrientos.com
