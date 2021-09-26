@@ -1,6 +1,6 @@
 .distort {
   color: white;
-  font-size: 9vw;
+  font-size: 10vw;
 }
 
 @keyframes "blink" {
@@ -75,7 +75,7 @@ canvas {
 }
 
 body {
-  background-color: #000000 !important;
+  background-color: black !important;
 }
 
 .list-group {
