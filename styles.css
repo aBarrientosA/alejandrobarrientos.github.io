@@ -1,28 +1,10 @@
-.navbar {
-  background-color: black;
-  background-image: radial-gradient(rgb(41, 40, 40) 50%, transparent 50%);
-  background-size: 4px 4px;
-  padding-top: 2em;
+.distort {
+  color: white;
+  font-size: 9vw;
 }
-#profilePicture {
-  max-width: 75%;
-  max-height: 75%;
-  align-self: auto;
-  padding-bottom: 1.5rem;
-}
-/* .blinking-cursor {
-  font-weight: 100;
-  font-size: inherit;
-  color: #2e3d48;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-} */
+
 @keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -30,38 +12,31 @@
   }
 }
 @-moz-keyframes blink {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
     color: black;
   }
 }
-
 @-webkit-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
     color: black;
   }
 }
-
 @-ms-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
     color: black;
   }
 }
-
 @-o-keyframes "blink" {
-  from,
-  to {
+  from, to {
     color: transparent;
   }
   50% {
@@ -69,8 +44,9 @@
   }
 }
 h3 {
-  font-family: "Monaco"
+  font-family: "Monaco";
 }
+
 .background {
   position: absolute;
   display: block;
@@ -78,26 +54,182 @@ h3 {
   left: 0;
   z-index: 0;
 }
+
 #tsparticles {
   position: absolute;
   width: 100%;
   height: inherit;
-  background-color: #ffffff;
   background-repeat: repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
+
 canvas {
-  display:block;
+  display: block;
   position: fixed;
   z-index: -1;
 }
+
 .row {
   --bs-gutter-x: 0 !important;
 }
-.distort {
-  color: #222;
+
+body {
+  background-color: #000000 !important;
 }
-span {
-  
+
+.list-group {
+  color: black;
 }
+
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    background-color: black;
+    background-image: radial-gradient(#292828 50%, transparent 50%);
+    background-size: 4px 4px;
+    padding-top: 2em;
+  }
+
+  .col-10 {
+    max-width: 75% !important;
+  }
+
+  #profilePicture {
+    max-width: 75%;
+    max-height: 75%;
+    align-self: auto;
+    padding-bottom: 1.5rem;
+  }
+
+  #mainContent {
+    margin-left: 35% !important;
+    margin-top: 10%;
+  }
+
+  /* .blinking-cursor {
+    font-weight: 100;
+    font-size: inherit;
+    color: #2e3d48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  } */
+  #leftContent {
+    position: fixed;
+    padding: 4rem;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  .navbar {
+    background-color: black;
+    background-image: radial-gradient(#292828 50%, transparent 50%);
+    background-size: 4px 4px;
+    padding-top: 2em;
+  }
+
+  #profilePicture {
+    max-width: 75%;
+    max-height: 75%;
+    align-self: auto;
+    padding-bottom: 1.5rem;
+  }
+
+  #mainContent {
+    margin-left: 30%;
+  }
+
+  /* .blinking-cursor {
+    font-weight: 100;
+    font-size: inherit;
+    color: #2e3d48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  } */
+  #leftContent {
+    position: fixed;
+    padding: 2.5rem !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    background-color: black;
+    background-image: radial-gradient(#292828 50%, transparent 50%);
+    background-size: 4px 4px;
+    padding-top: 2em;
+  }
+
+  #profilePicture {
+    max-width: 75%;
+    max-height: 75%;
+    align-self: auto;
+    padding-bottom: 1rem;
+  }
+
+  #mainContent {
+    padding: 7vw;
+  }
+
+  /* .blinking-cursor {
+    font-weight: 100;
+    font-size: inherit;
+    color: #2e3d48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  } */
+  #leftContent {
+    padding: 2.5rem !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .navbar {
+    background-color: black;
+    background-image: radial-gradient(#292828 50%, transparent 50%);
+    background-size: 4px 4px;
+    padding-top: 2em;
+  }
+
+  .col-10 {
+    width: 95% !important;
+  }
+
+  #profilePicture {
+    max-width: 75%;
+    max-height: 75%;
+    align-self: auto;
+    padding-bottom: 1rem;
+  }
+
+  #mainContent {
+    padding: 15vw;
+  }
+
+  #leftContent {
+    padding: 2.5rem !important;
+  }
+
+  .container-sm ul li {
+    font-size: 3.6vw;
+  }
+  .container-sm h3 {
+    font-size: calc(1.3rem + .3vw);
+  }
+  .container-sm p {
+    font-size: 3.75vw;
+  }
+  .container-sm .row {
+    margin-top: 2rem !important;
+  }
+}
+/*# sourceMappingURL=styles.scss.map */
+/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.scss.map */
+
+/*# sourceMappingURL=styles.css.map */
