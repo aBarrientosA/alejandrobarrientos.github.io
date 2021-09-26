@@ -209,6 +209,7 @@ body {
 
   #mainContent {
     padding: 15vw;
+    padding-top: 10vw;
   }
 
   #leftContent {
@@ -225,7 +226,7 @@ body {
     font-size: 3.75vw;
   }
   .container-sm .row {
-    margin-top: 2rem !important;
+    margin-top: 2.4rem !important;
   }
 }
 
