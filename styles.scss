@@ -1,7 +1,36 @@
-
+@font-face {
+  font-family: 'newFont';
+  src: url("external-fonts/Mulish/static/Mulish-Bold.ttf");
+}
+@font-face {
+  font-family: 'body-font';
+  src: url("external-fonts/Mulish/static/Mulish-Light.ttf");
+}
+$custom-bold: 'newFont';
+$body-font: 'body-font';
 .distort {
   color: white;
   font-size: 10vw;
+}
+.container-sm {
+  margin-bottom: 8vh !important;
+}
+#mainContent {
+  h3 {
+    font-family: $custom-bold !important;
+  }
+  .col-10 {
+    font-family: $body-font !important;
+  }
+
+}
+#leftContent {
+  h3 {
+    font-family: $custom-bold !important;
+  }
+  p {
+    font-family: $body-font !important;
+  }
 }
 @keyframes "blink" {
   from, to {
@@ -70,10 +99,12 @@ canvas {
 }
 .row {
   --bs-gutter-x: 0 !important;
-}
-
+} 
 body {
   background-color: black !important;
+}
+.navbar {
+  font-family: $custom-bold !important;
 }
 
 .list-group {
@@ -99,6 +130,7 @@ body {
   #mainContent {
     margin-left: 35% !important;
     margin-top: 10%;
+
   }
 
   /* .blinking-cursor {
